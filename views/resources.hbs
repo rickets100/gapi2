@@ -1,0 +1,19 @@
+<h1>This is the resources.hbs file</h1>
+
+<div>
+    {{#each resources}}
+      <div>
+        <p>{{ this.res_url }}</p>
+        <p>{{ this.res_name }}</p>
+        <p>{{ this.res_description }}</p>
+        <p>{{ this.res_format }}</p>
+        <p>{{ this.id }}</p>
+
+        <form method="POST" action="/resources/{{this.id}}?_method=DELETE" >
+          <button type="submit">Delete</button>
+        </form>
+        <br>
+      </div>
+    {{/each}}
+  </div>
+  <br>
